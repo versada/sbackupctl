@@ -12,3 +12,4 @@ Pre-Depends: dpkg (>= 1.16.1), python2.7
 Depends: ${python:Depends}, daemontools
 Section: python
 Priority: optional
+Description: Backups for Odoo projects
