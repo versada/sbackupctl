@@ -2,7 +2,8 @@ pipeline:
   test:
     image: eu.gcr.io/river-pillar-123013/drone-debuild:${DEBUILD_UBUNTU_VERSION}
     commands:
-      - python2 setup.py test
+      - pip install pytest
+      - pytest
 
   build:
     image: eu.gcr.io/river-pillar-123013/drone-debuild:${DEBUILD_UBUNTU_VERSION}
