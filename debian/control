@@ -1,0 +1,14 @@
+Source: versada-odoo-backups
+Section: python
+Priority: extra
+X-Python-Version: 2.7
+Maintainer: UAB Versada
+Build-Depends: python-all-dev
+Standards-Version: 3.9.5
+
+Package: versada-odoo-backups
+Architecture: any
+Pre-Depends: dpkg (>= 1.16.1), python2.7
+Depends: ${python:Depends}, daemontools
+Section: python
+Priority: optional

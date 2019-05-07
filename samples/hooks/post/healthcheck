@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+curl -fsS --retry 3 "https://hc-ping.com/$HEALTHCHECK_TOKEN" > /dev/null

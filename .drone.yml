@@ -1,0 +1,26 @@
+pipeline:
+  test:
+    image: eu.gcr.io/river-pillar-123013/drone-debuild:${DEBUILD_UBUNTU_VERSION}
+    commands:
+      - python2 setup.py test
+
+  build:
+    image: eu.gcr.io/river-pillar-123013/drone-debuild:${DEBUILD_UBUNTU_VERSION}
+    commands:
+      - apt update
+      - make build
+      - build_here
+
+  cloudsmith:
+    image: eu.gcr.io/river-pillar-123013/drone-cloudsmith-cli:0.7.0-2
+    method: upload
+    type: deb
+    repo: versada/common/ubuntu/${REPO}
+    secrets: [ cloudsmith_api_key ]
+
+matrix:
+  include:
+    - DEBUILD_UBUNTU_VERSION: 0.3-xenial
+      REPO: xenial
+    - DEBUILD_UBUNTU_VERSION: 0.1-bionic
+      REPO: bionic

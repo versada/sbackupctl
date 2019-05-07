@@ -1,0 +1,8 @@
+[Unit]
+Description=Borg Backup Service
+
+[Service]
+Type=oneshot
+Group=systemd-journal
+User=root
+ExecStart=/usr/bin/envdir /opt/obctl/env /usr/bin/obctl backup

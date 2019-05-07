@@ -3,12 +3,12 @@ from setuptools import setup, find_packages
 
 # Get the long description from the README file
 here = path.abspath(path.dirname(__file__))
-with open(path.join(here, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
+with open(path.join(here, 'README.md')) as f:
+    long_description = f.read().decode('utf-8')
 
 setup(
     name='versada_odoo_backups',
-    description='A Utility for launching Odoo backups',
+    description='Odoo Backup Controller',
     long_description=long_description,
     long_description_content_type="text/markdown",
     use_scm_version=True,
@@ -20,7 +20,7 @@ setup(
     tests_require=[
         'pytest',
         'mock',
-        'coveralls',
+        'pytest-runner',
     ],
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     classifiers=[
@@ -31,7 +31,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'ctshed=versada_odoo_backups.cli:main'
+            'obctl=versada_odoo_backups.cli:main'
         ]
     },
     url='https://github.com/versada/versada-odoo-backups.git',

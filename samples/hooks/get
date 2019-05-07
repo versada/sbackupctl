@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+set -e
+
+if [ "$PWD" = '/' ]; then
+	echo "Cannot use this in root directory"
+	exit 1
+fi
+
+borg extract ::"$1"

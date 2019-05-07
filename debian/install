@@ -1,0 +1,4 @@
+systemd/odoo-backup.service /lib/systemd/system
+systemd/odoo-backup.timer /lib/systemd/system
+
+samples/* /usr/share/obctl

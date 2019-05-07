@@ -1,0 +1,8 @@
+/opt/obctl/env
+
+/opt/obctl/hooks/backup
+/opt/obctl/hooks/pre
+/opt/obctl/hooks/post
+
+/var/lib/obctl/archive
+/var/lib/obctl/staging

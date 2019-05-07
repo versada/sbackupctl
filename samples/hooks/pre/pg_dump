@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+DIR=${STAGING_DIR:="/var/lib/obctl/staging"}
+
+sudo -i -u postgres pg_dump -Fp -O "$PGDATABASE" | gzip > "$DIR/$PGDATABASE.sql.gz"

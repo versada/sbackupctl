@@ -11,10 +11,6 @@ backup step takes place. For example to pg\_dump a database to a directory.
 This should be done only once so it would be nice to have a simple framework
 (dir structure) to extend the default strategy.
 
-# Features
+# Installation
 
-1.  Installing does nothing
-2.  Configurable via ENV variables
-3.  `pre/backup/post` directories where executables are placed
-4.  backup/list/get commands to manage backups with a unified API
-5.  systemctl timers/service units for easy enabling of backups
+# Usage
