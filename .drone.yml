@@ -1,3 +1,9 @@
+clone:
+  git:
+    image: plugins/git
+    recursive: true
+    tags: true
+
 pipeline:
   test:
     image: eu.gcr.io/river-pillar-123013/drone-debuild:${DEBUILD_UBUNTU_VERSION}
