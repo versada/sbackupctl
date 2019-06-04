@@ -7,8 +7,8 @@ with open(path.join(here, 'README.md')) as f:
     long_description = f.read().decode('utf-8')
 
 setup(
-    name='versada_odoo_backups',
-    description='Odoo Backup Controller',
+    name='versada_sbackupctl',
+    description='Simple Backup Controller',
     long_description=long_description,
     long_description_content_type="text/markdown",
     use_scm_version=True,
@@ -31,8 +31,8 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'obctl=versada_odoo_backups.cli:main'
+            'sbackupctl=versada_sbackupctl.cli:main'
         ]
     },
-    url='https://github.com/versada/versada-odoo-backups.git',
+    url='https://github.com/versada/sbackupctl.git',
 )

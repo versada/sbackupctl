@@ -1,8 +1,8 @@
-/opt/obctl/env
+/opt/sbackupctl/env
 
-/opt/obctl/hooks/backup
-/opt/obctl/hooks/pre
-/opt/obctl/hooks/post
+/opt/sbackupctl/hooks/backup
+/opt/sbackupctl/hooks/pre
+/opt/sbackupctl/hooks/post
 
-/var/lib/obctl/archive
-/var/lib/obctl/staging
+/var/lib/sbackupctl/archive
+/var/lib/sbackupctl/staging

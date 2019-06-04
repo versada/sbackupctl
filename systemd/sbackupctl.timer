@@ -1,5 +1,5 @@
 [Unit]
-Description=Borg Backup Timer
+Description=Backup Timer
 
 [Timer]
 OnCalendar=daily

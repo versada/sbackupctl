@@ -1,0 +1,8 @@
+[Unit]
+Description=Backup Service
+
+[Service]
+Type=oneshot
+Group=systemd-journal
+User=root
+ExecStart=/usr/bin/envdir /opt/sbackupctl/env /usr/bin/sbackupctl backup

@@ -1,7 +1,7 @@
 import os
 import mock
 
-from versada_odoo_backups import cli
+from versada_sbackupctl import cli
 
 DIR_HERE = os.path.abspath(os.path.dirname(__file__))
 DIR_HOOKS = os.path.join(DIR_HERE, 'test_hook_dir')
@@ -11,7 +11,7 @@ def _hook_dir(path):
     return os.path.join(DIR_HOOKS, path)
 
 
-@mock.patch('versada_odoo_backups.cli._call_executable')
+@mock.patch('versada_sbackupctl.cli._call_executable')
 def test_backup_subcommand(call_executable):
     _call('--hook-dir=%s backup' % DIR_HOOKS)
     expected_calls = [
@@ -25,14 +25,14 @@ def test_backup_subcommand(call_executable):
     call_executable.assert_has_calls(expected_calls)
 
 
-@mock.patch('versada_odoo_backups.cli._call_executable')
+@mock.patch('versada_sbackupctl.cli._call_executable')
 def test_list_subcommand(call_executable):
     _call('--hook-dir=%s list' % DIR_HOOKS)
     expected_calls = [mock.call([_hook_dir('list')])]
     call_executable.assert_has_calls(expected_calls)
 
 
-@mock.patch('versada_odoo_backups.cli._call_executable')
+@mock.patch('versada_sbackupctl.cli._call_executable')
 def test_get_subcommand(call_executable):
     _call('--hook-dir=%s get 12345' % DIR_HOOKS)
     expected_calls = [mock.call([_hook_dir('get'), '12345'])]

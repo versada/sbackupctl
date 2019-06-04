@@ -37,9 +37,9 @@ def download_backup(args):
 
 
 def get_parser():
-    parser = argparse.ArgumentParser('Odoo Backup Controller')
+    parser = argparse.ArgumentParser('Simple Backup Controller')
     parser.add_argument(
-        '--hook-dir', default=os.getenv('OBCTL_HOOK_DIR', '/opt/obctl/hooks')
+        '--hook-dir', default=os.getenv('SBACKUPCTL_HOOK_DIR', '/opt/sbackupctl/hooks')
     )
     subparsers = parser.add_subparsers()
 

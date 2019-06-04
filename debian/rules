@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-export PYBUILD_NAME=versada_odoo_backups
+export PYBUILD_NAME=versada_sbackupctl
 
 %:
 	dh $@ --with python2 --buildsystem=pybuild

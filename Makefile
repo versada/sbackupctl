@@ -6,7 +6,7 @@ build: debian/changelog
 
 debian/changelog: FORCE
 	-rm -f debian/changelog
-	dch --create --package "versada-odoo-backups" \
+	dch --create --package "versada-sbackupctl" \
 		--newversion $(VERSION) "release $(VERSION)"
 
 FORCE:
