@@ -9,7 +9,7 @@ Standards-Version: 3.9.5
 Package: versada-sbackupctl
 Architecture: any
 Pre-Depends: dpkg (>= 1.16.1), python2.7
-Depends: ${python:Depends}, daemontools
+Depends: ${python:Depends}, daemontools, python-setuptools
 Recommends: borgbackup, postgresql-client
 Section: python
 Priority: optional
