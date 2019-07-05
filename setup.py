@@ -16,6 +16,7 @@ setup(
         'setuptools_scm',
         'pytest-runner',
     ],
+    python_requires='>=2.7, <3',
     install_requires=[],
     tests_require=[
         'pytest',
